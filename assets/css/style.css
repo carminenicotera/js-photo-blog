@@ -6,9 +6,9 @@
   box-sizing: border-box;
 }
 
-img {
+/* img {
   max-width: 100%;
-}
+} */
 
 /* Header */
 
@@ -22,8 +22,12 @@ img {
 
 /* Main */
 
-.posts {
+.page-main {
   background-image: url(../img/cork.png);
+  height: 100vh;
+}
+
+.posts {
   padding: 30px;
 }
 
@@ -37,4 +41,8 @@ img {
   top: -1rem;
   left: 50%;
   transform: translate(-50%);
+}
+
+.card-body {
+  text-align: center;
 }
