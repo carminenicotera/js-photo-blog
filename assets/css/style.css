@@ -13,14 +13,28 @@ img {
 /* Header */
 
 .page-header {
+  min-height: 147px;
   background-image: url(../img/wall.png);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /* Main */
 
 .posts {
   background-image: url(../img/cork.png);
-  
+  padding: 30px;
+}
+
+.card {
+  position: relative;
+  background-color: white;
+}
+
+.pin {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translate(-50%);
 }
