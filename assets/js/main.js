@@ -17,8 +17,8 @@ fetch(endpoint)
               <img src="./assets/img/pin.svg" alt="pin" class="pin">
               <div class="card-body">
                 <img src=${url} alt="img" class="card-img-top">
-                <h3>${date}</h3>
-                <div>${title}</div>
+                <h3 class="date">${date}</h3>
+                <h2 class="title card-text"><strong>${title}</strong></h2>
               </div>
             </div>
           </div>`

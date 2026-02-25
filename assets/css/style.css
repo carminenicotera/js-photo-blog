@@ -6,25 +6,53 @@
   box-sizing: border-box;
 }
 
-/* img {
+img {
+  display: block;
   max-width: 100%;
-} */
+}
+
+/* General */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: 'Edu TAS Beginner', sans-serif;
+}
+
+.date {
+  font-family: "Sometype Mono", monospace;
+  font-size: 1rem;
+  color: gray;
+  margin-top: 1rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 4rem;
+}
 
 /* Header */
 
+
 .page-header {
-  min-height: 147px;
+  min-height: 140px;
   background-image: url(../img/wall.png);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+
 /* Main */
 
 .page-main {
   background-image: url(../img/cork.png);
-  height: 100vh;
+  flex-grow: 1;
+  background-repeat: repeat;
 }
 
 .posts {
@@ -43,6 +71,6 @@
   transform: translate(-50%);
 }
 
-.card-body {
-  text-align: center;
+.card-text {
+  width: 300px;
 }
