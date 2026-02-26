@@ -8,6 +8,9 @@ const overlayEl = document.getElementById('overlay-id');
 const buttonEl = document.getElementById('close');
 console.log(overlayEl, buttonEl);
 
+const overlayImgEl = document.getElementById('overlay-img');
+console.log(overlayImgEl);
+
 
 fetch(endpoint)
   .then(result => result.json())
@@ -36,7 +39,14 @@ fetch(endpoint)
     
     cards.forEach(card => {
       card.addEventListener('click', () => {
-        overlayEl.classList.remove('overlay')
+        const imgClicked = card.querySelector('.card-img-top');
+        console.log(imgClicked);
+        
+        const imgSrc = imgClicked.src;
+        overlayImgEl.src = imgSrc;
+        console.log(overlayImgEl);
+        
+        overlayEl.classList.remove('overlay');
       })
     })
   })
