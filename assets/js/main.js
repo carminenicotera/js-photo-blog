@@ -4,6 +4,11 @@ console.log(endpoint);
 const rowEl = document.querySelector('.row')
 console.log(rowEl);
 
+const overlayEl = document.getElementById('overlay-id');
+const buttonEl = document.getElementById('close');
+console.log(overlayEl, buttonEl);
+
+
 fetch(endpoint)
   .then(result => result.json())
   .then(data => {
@@ -25,4 +30,17 @@ fetch(endpoint)
       console.log(markup);
       rowEl.innerHTML += markup;
     });
+
+    const cards = document.querySelectorAll('.card');
+    console.log(cards);
+    
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        overlayEl.classList.remove('overlay')
+      })
+    })
+  })
+
+  buttonEl.addEventListener('click', () =>{
+    overlayEl.classList.add('overlay');
   })
